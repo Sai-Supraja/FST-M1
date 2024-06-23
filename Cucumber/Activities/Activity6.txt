@@ -1,0 +1,33 @@
+@CucumberOptions(
+    features = "features",
+    glue = {"stepDefinitions"},
+    tags = "@SmokeTest",
+    plugin = {"pretty"},
+    monochrome = true
+)
+
+@CucumberOptions(
+    features = "features",
+    glue = {"stepDefinitions"},
+    tags = "@SmokeTest",
+    plugin = {"html: test-reports"},
+    monochrome = true
+)
+
+@RunWith(Cucumber.class)
+@CucumberOptions(
+    features = "features",
+    glue = {"stepDefinitions"},
+    tags = "@SimpleAlert",
+    plugin = {"pretty"},
+    monochrome = true
+)
+
+@RunWith(Cucumber.class)
+@CucumberOptions(
+    features = "features",
+    glue = {"stepDefinitions"},
+    tags = "@SimpleAlert",
+    plugin = {"json: test-reports/json-report.json"},
+    monochrome = true
+)
